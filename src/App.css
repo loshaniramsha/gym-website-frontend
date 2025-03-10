@@ -164,3 +164,110 @@ header p {
     align-items: flex-start;
   }
 }
+
+
+/* Workout Session */
+.work_session {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  gap: 50px;
+}
+
+.work_session .wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work_session .wrapper h1 {
+  font-size: 2rem;
+  color: #111;
+}
+
+.work_session .wrapper p {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.work_session .wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.work_session .wrapper .bootcamps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work_session .wrapper .bootcamps div {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.work_session .wrapper .bootcamps div:hover {
+  background: #111;
+}
+
+.work_session .wrapper .bootcamps div:hover h4 {
+  color: #0095ff;
+}
+
+.work_session .wrapper .bootcamps div:hover p {
+  color: whitesmoke;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .work_session {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  .work_session .wrapper h1 {
+    font-size: 1.6rem;
+  }
+
+  .work_session .wrapper p {
+    font-size: 1rem;
+  }
+
+  .work_session .wrapper .bootcamps div h4 {
+    font-size: 1rem;
+  }
+
+  .work_session .wrapper .bootcamps div p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .work_session {
+    padding: 30px 10px;
+    gap: 20px;
+  }
+
+  .work_session .wrapper h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .work_session .wrapper p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .work_session .wrapper .bootcamps div {
+    padding: 15px;
+  }
+}
