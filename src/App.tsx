@@ -9,17 +9,16 @@ import Gallery from "./component/Gallery.tsx";
 import Hero from "./component/Hero.tsx";
 import Navbar from "./component/Navbar.tsx";
 import Pricing from "./component/Pricing.tsx";
+import WorkOutSession from "./component/WorkOutSession.tsx";
 
-function WorkoutSession() {
-    return null;
-}
+
 
 const App = () => {
     return (
         <Router>
             <Navbar />
             <Hero />
-            <WorkoutSession />
+            <WorkOutSession />
             <Gallery />
             <Pricing />
             <Contact />
