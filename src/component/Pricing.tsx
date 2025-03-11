@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 const Pricing = () => {
     const pricingPlans = [
         {
-            imgUrl: "/img/pricing-img.png",
+            imgUrl: "public/img/gym-girl-contact.png",
             title: "QUARTERLY",
             price: 10000,
             length: 3,
         },
         {
-            imgUrl: "/img/pricing-img.png",
+            imgUrl: "/img/gym-girl-contact.png",
             title: "HALF_YEARLY",
             price: 34000,
             length: 6,
         },
         {
-            imgUrl: "/img/pricing-img.png",
+            imgUrl: "img/gym-girl-contact.png",
             title: "YEARLY",
             price: 670000,
             length: 12,
