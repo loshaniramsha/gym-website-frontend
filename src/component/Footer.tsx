@@ -1,8 +1,12 @@
-const footer=()=>{
-    return(
-        <div>
+const Footer = () => {
+    return (
+        <footer>
+            Design and Development by :-
+            <a href="https://loshaniramsha.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Loshani Ramsha
+            </a>
+        </footer>
+    );
+};
 
-        </div>
-    )
-}
-export default footer
+export default Footer;
