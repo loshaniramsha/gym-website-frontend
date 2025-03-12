@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
+import emailjs from "@emailjs/browser"; // Import EmailJS properly
 
 const Contacts = () => {
     const [name, setName] = useState("");
@@ -7,18 +8,34 @@ const Contacts = () => {
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
 
-        // Simulating a fake submission delay
-        setTimeout(() => {
+        // EmailJS parameters
+        const params = {
+            name,
+            email,
+            message,
+        };
+
+        try {
+            await emailjs.send(
+                "service_cayc3ow", // Your Service ID
+                "template_oj9kc69", // Your Template ID
+                params,
+                "nTMW-4sMRwuw5LZt1" // Your Public Key
+            );
             alert("Message sent successfully!");
-            setLoading(false);
             setName("");
             setEmail("");
             setMessage("");
-        }, 2000);
+        } catch (error) {
+            console.error("Error sending email:", error);
+            alert("Failed to send message. Please try again.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -49,12 +66,11 @@ const Contacts = () => {
                 </div>
                 <div>
                     <label>Message</label>
-                    <input
-                        type="text"
+                    <textarea
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         name="message"
-                        placeholder="Message"
+                        placeholder="Your message here..."
                         required
                     />
                 </div>

@@ -4,7 +4,10 @@ const hero=()=>{
         <section className="hero">
 
             <div className="content">
-                <div className="header">ELITE EDGE FITNESS</div>
+                <div className="header">ELITE EDGE FITNESS
+
+                </div>
+
                 <div className="title">
                     <h1>LET'S</h1>
                     <h1>GET</h1>
