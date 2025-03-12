@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 const BMICalculator = () => {
-    const [height, setHeight] = useState("");
-    const [weight, setWeight] = useState("");
+    const [height, setHeight] = useState(0);
+    const [weight, setWeight] = useState(0);
     const [gender, setGender] = useState("");
-    const [bmiValue, setBmi] = useState("");
+    const [bmiValue, setBmi] = useState(0);
 
     const calculateBMI = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -16,7 +16,7 @@ const BMICalculator = () => {
         }
 
         const heightInMeters = height / 100;
-        const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+        const bmi = (weight / (heightInMeters * heightInMeters));
         setBmi(bmi);
 
         if (bmi < 18.5) {
@@ -41,7 +41,7 @@ const BMICalculator = () => {
                             <input
                                 type="number"
                                 value={height}
-                                onChange={(e) => setHeight(e.target.value)}
+                                onChange={(e) => setHeight(Number(e.target.value))}
                                 required
                             />
                         </div>
@@ -50,7 +50,7 @@ const BMICalculator = () => {
                             <input
                                 type="number"
                                 value={weight}
-                                onChange={(e) => setWeight(e.target.value)}
+                                onChange={(e) => setWeight(Number(e.target.value))}
                                 required
                             />
                         </div>
