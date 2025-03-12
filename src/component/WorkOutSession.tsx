@@ -1,4 +1,4 @@
-import gym_grl from "../../public/img/gym-grl.png";
+import gym_grl from "../assets/img/gym-grl.png";
 
 const WorkOutSession = () => {
     return (

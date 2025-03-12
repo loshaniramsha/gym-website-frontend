@@ -67,7 +67,7 @@ const BMICalculator = () => {
                     {bmiValue && <p className="bmi-result">Your BMI: {bmiValue}</p>}
                 </div>
                 <div className="wrapper">
-                    <img src="/img/bmi-img.png" alt="BMI Illustration" />
+                    <img src="/src/assets/img/bmi-img.png" alt="BMI Illustration" />
                 </div>
             </div>
         </section>

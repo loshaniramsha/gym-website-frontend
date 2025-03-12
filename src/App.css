@@ -34,7 +34,7 @@ header p {
 .hero {
   min-height: 100vh;
   position: relative;
-  background: url(../public/img/gym-boy-here-page.png) no-repeat center /cover;
+  background: url(assets/img/gym-boy-here-page.png) no-repeat center /cover;
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
@@ -527,7 +527,7 @@ header p {
 /*contact*/
 .contact {
   min-height: 800px;
-  background: url(../public/img/gym.png) rgba(0, 0, 0, 0.75);
+  background: url(assets/img/gym.png) rgba(0, 0, 0, 0.75);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
